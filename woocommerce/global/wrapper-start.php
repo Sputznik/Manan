@@ -23,7 +23,7 @@ $template = wc_get_theme_slug_for_templates();
 
 switch ( $template ) {
 	case 'sputznik-core-wp-theme':
-		echo '<div class="container"><div class="col-sm-12">';
+		echo '<div class="container"><div class="row"><div class="col-sm-12">';
 		break;
 	case 'twentyten' :
 		echo '<div id="container"><div id="content" role="main">';

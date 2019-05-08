@@ -23,7 +23,7 @@ $template = wc_get_theme_slug_for_templates();
 
 switch ( $template ) {
 	case 'sputznik-core-wp-theme' :
-		echo '</div></div>';
+		echo '</div></div></div>';
 		break;
 	case 'twentyten' :
 		echo '</div></div>';
