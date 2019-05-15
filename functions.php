@@ -1,10 +1,10 @@
 <?php
 
 add_action('wp_enqueue_scripts',function(){
-	
-	wp_enqueue_style('manan-child', get_stylesheet_directory_uri().'/style.css', array('sp-core-style'), '1.0.0' );
-	
-	wp_enqueue_style( 'manan', get_stylesheet_directory_uri() .'/assets/css/manan.css', array( 'manan-child' ), time() );
+
+	//wp_enqueue_style('manan-child', get_stylesheet_directory_uri().'/style.css', array(''), '1.0.0' );
+
+	wp_enqueue_style( 'manan', get_stylesheet_directory_uri() .'/assets/css/manan.css', array( 'sp-core-style' ), '1.0.5' );
 });
 
 
@@ -36,3 +36,10 @@ add_filter( 'sp_list_google_fonts', function( $fonts ){
   );
   return $fonts;
 } );
+
+// Changing excerpt more
+   function new_excerpt_more($more) {
+   global $post;
+   return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
+   }
+   add_filter('excerpt_more', 'new_excerpt_more');

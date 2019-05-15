@@ -1,0 +1,11 @@
+.sp-post img{
+  max-width: 100%;
+  height: auto;
+}
+@media( min-width: 769px ){
+  .sp-posts-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
