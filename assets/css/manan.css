@@ -7,9 +7,12 @@
   height: auto;
 }
 @media( min-width: 769px ){
-  .sp-posts-2{
+  .sp-posts-2, .sp-posts-3{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+  }
+  .sp-posts-2{
+    grid-template-columns: 1fr 1fr;
   }
 }
