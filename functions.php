@@ -37,9 +37,8 @@ add_filter( 'sp_list_google_fonts', function( $fonts ){
   return $fonts;
 } );
 
-// Changing excerpt more
-   function new_excerpt_more($more) {
-   global $post;
-   return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
-   }
-   add_filter('excerpt_more', 'new_excerpt_more');
+//Remove [....] from the_excerpt() function
+function new_excerpt_more( $more ) {
+  return '';
+  }
+add_filter( 'excerpt_more', 'new_excerpt_more' );
