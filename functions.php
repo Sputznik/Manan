@@ -44,6 +44,6 @@ function new_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 add_filter( 'single_product_archive_thumbnail_size', function( $size ){
-	echo $size;
+	$size = 'medium';
 	return $size;
 } );
