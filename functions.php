@@ -42,3 +42,8 @@ function new_excerpt_more( $more ) {
   return '';
   }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+add_filter( 'single_product_archive_thumbnail_size', function( $size ){
+	echo $size;
+	return $size;
+} );
